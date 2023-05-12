@@ -1,0 +1,26 @@
+﻿@model Songs
+
+<h2>@Model.SongTitle Information</h2>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Song Title</th>
+        <th>Arranger</th>
+        <th>Occasion</th>
+        <th>Last Performed</th>
+        <th>Times Performed</th>
+    </tr>
+    <tr>
+        <td>@Model.PerformanceID</td>
+        <td>@Model.SongTitle</td>
+        <td>@Model.Arranger</td>
+        <td>@Model.Occasion</td>
+        <td>@Model.LastPerformed</td>
+        <td>@Model.TimesPerformed</td>
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/Songs/UpdateSong/@Model.PerformanceID">Update this Song</a>
+</div>
