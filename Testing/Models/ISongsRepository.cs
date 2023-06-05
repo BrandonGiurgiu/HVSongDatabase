@@ -11,6 +11,9 @@ namespace Testing.Models
 
         public void UpdateSong(Songs songs);
 
+        public void InsertSong(Songs songToInsert);
+        public void DeleteSongs(int id);
+
     }
 }
 

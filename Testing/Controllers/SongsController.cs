@@ -48,7 +48,20 @@ namespace Testing.Controllers
 
             return RedirectToAction("ViewSong", new { id = song.PerformanceID });
         }
-
+        public IActionResult InsertSong()
+        {
+            return View();
+        }
+        public IActionResult InsertSongToDatabase(Songs songToInsert)
+        {
+            repo.InsertSong(songToInsert);
+            return RedirectToAction("Index");
+        }
+        public IActionResult Delete(int id)
+        {
+            repo.DeleteSongs(id);
+            return Json("");
+        }
 
     }
 }

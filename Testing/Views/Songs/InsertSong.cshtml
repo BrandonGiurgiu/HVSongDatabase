@@ -1,0 +1,27 @@
+﻿@model Songs
+
+<h2>Create a New Song</h2>
+<hr />
+@using (Html.BeginForm("InsertSongToDatabase", "Songs", "Post"))
+{
+    <input asp-for="PerformanceID" type="hidden" value="" />
+
+    <label asp-for="SongTitle" class="control-label">Song Title</label>
+    <input type="text" name="SongTitle" class="form-control" value="" />
+
+    <label asp-for="Arranger" class="control-label">Arranger</label>
+    <input type="text" name="Arranger" class="form-control" />
+
+    <label asp-for="Occasion" class="control-label">Occasion</label>
+    <input type="text" name="Occasion" class="form-control" />
+
+    <label asp-for="LastPerformed" class="control-label">Last Performed</label>
+    <input type="text" name="LastPerformed" class="form-control" />
+
+    <label asp-for="TimesPerformed" class="control-label">Times Performed</label>
+    <input type="number" step="1" name="TimesPerformed" class="form-control" />
+
+    <br />
+    <input type="submit" value="Create Song" class="btn btn-primary" style="float:right" />
+    <br />
+}

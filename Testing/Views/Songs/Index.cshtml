@@ -1,7 +1,11 @@
 ﻿@model IEnumerable<Songs>
 
-<h2>Songs</h2>
+    <br />
+<h2 style="float:left">Songs</h2>
 
+<div style="display: block;float:right">
+    <a href="/Songs/InsertSong/" class="btn btn-primary">Create a New Song</a>
+</div>
 
 <table class="table">
     <tr>
@@ -11,6 +15,7 @@
         <th>Occasion</th>
         <th>Last Performed</th>
         <th>Times Performed</th>
+        <th>Action</th>
     </tr>
 
     @foreach (var song in Model)
@@ -22,11 +27,12 @@
             <td>@song.Occasion</td>
             <td>@song.LastPerformed</td>
             <td>@song.TimesPerformed</td>
+            <td>
+                <a href="javascript:;" onclick="DeleteSong('@song.PerformanceID')" class="text-danger ">Delete</a>
+            </td>
         </tr>
     }
 
 
 
 </table>
-
-
